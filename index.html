@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/master.css">
+    <!-- Font -->
+</head>
+<body>
+<!-- NAVBAR -->
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+
+                </div>
+                <div class="col-8">
+
+                </div>
+                <div class="col-2">
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- MAIN APP-->
+
+    <section>
+        <div class="app">
+            <div class="container app-container">
+                <div class="row row-app">
+                    <div class="password-display">
+                        <div class="title-wrapper">
+                            <h1>Your Password</h1>
+                        </div>
+                        <div class="generated-pass-wrapper">
+                            <h3>Password</h3>
+                        </div>
+                    </div>
+                    <form class="form" action="">
+                        <div class="char-input-wrapper">
+                            <label for="charAmountNumber">Number of Charachters</label> 
+                            <input type="range" id="charAmountRange" min="1" max="50" value="15">
+                            <input type="number" id="charAmountNumber" min="1" max="50" value="15"> 
+                        </div>
+                        <button class="generate-btn" type="submit">Generate Password</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- FOOTER -->
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="./js/master.js"></script>
+</body>
+</html>

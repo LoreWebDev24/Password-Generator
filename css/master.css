@@ -1,0 +1,136 @@
+/* RESETTING RULES BACKGROUND AND FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html { 
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: grey;
+    background-position: right;
+    overflow: hidden;
+}
+
+/* MAIN CONTAINERS  */
+
+.app {
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 1rem;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+
+/* FLEX AND PARTS OF THE APP  */
+
+.row {
+    display: flex;
+}
+
+.row-app {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.char-input-wrapper {
+    display: flex;
+    gap: 5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#charAmountRange {
+    margin-right: -5vw;
+}
+
+.password-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 5vh;
+    margin-bottom: 5vh;
+}
+
+/* STYLES */
+
+.generate-btn {
+    border: 0;
+    box-shadow: none;
+    height: 4vh;
+    background-color: white;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.generate-btn:hover {
+    background-color:  lightgreen;
+}
+
+/* INPUT RANGE STYLES WITH HIS THUMB */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 15rem;
+}
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    background-color: white;
+    height: 8px;
+    width: 8px;
+    border-radius: 999px;
+ }
+
+/***** Thumb Styles *****/
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+    border: none; /*Removes extra border that FF applies*/
+    background-color: white;
+    height: 8px;
+    width: 8px;
+    border-radius: 999px;
+}
+
+
+#charAmountRange {
+    background-color: lightgreen;
+    height: 2px;
+}
+
