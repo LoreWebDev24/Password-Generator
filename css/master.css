@@ -24,10 +24,19 @@ input {
   }
 
 .copy {
-    width: 60px;
-    height: 30px;
-    align-self: center;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+}
+
+.copy:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
+}
+
+.copy:active {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
 }
 
 /* MAIN CONTAINERS  */
@@ -67,6 +76,12 @@ input {
     height: 100%;
 }
 
+/* UTILITY CLASSES */
+
+.margin-top {
+    margin-top: 4px;
+}
+
 /* FLEX AND PARTS OF THE APP  */
 
 .row {
@@ -76,12 +91,20 @@ input {
 
 .col-2 {
     flex-basis: calc((100%/12)* 2);
+    align-self: center;
 }
 
 .col-8 {
     flex-basis: calc((100%/12)* 8);
     display: flex;
     justify-content: center;
+}
+
+.col-10 {
+    flex-basis: calc((100%/12)* 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .row-app {
