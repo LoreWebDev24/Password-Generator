@@ -6,7 +6,8 @@
     <title>Password Generator</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/master.css">
-    <!-- Font -->
+    <!-- MASTER JS  -->
+    <script src="./js/master.js" defer></script>
 </head>
 <body>
 <!-- NAVBAR -->
@@ -14,17 +15,16 @@
     <div class="video-wrapper">
         <video playsinline autoplay muted loop>
         <source src="./img/eva-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
         </video>
     </div>
     <nav class="navbar">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row nav-row">
                 <div class="col-2">
 
                 </div>
                 <div class="col-8">
-
+                    
                 </div>
                 <div class="col-2">
 
@@ -34,9 +34,8 @@
     </nav>
 
 <!-- MAIN APP-->
-    
 
-    <section>
+        <section>
         <div class="app">
             <div class="container app-container">
                 <div class="row row-app">
@@ -45,10 +44,10 @@
                             <h1>Generated Password</h1>
                         </div>
                         <div class="generated-pass-wrapper">
-                            <h3 class="password">Password</h3>
+                            <h3 id="passwordDisplay" class="password">Password will be Displayed Here</h3>
                         </div>
                     </div>
-                    <form class="form" action="">
+                    <form id="passwordGeneratorForm" class="form" action="">
                         <div class="char-input-wrapper">
                             <label for="charAmountNumber">Number of Charachters</label> 
                             <input type="range" id="charAmountRange" min="1" max="50" value="15">
@@ -61,7 +60,6 @@
         </div>
     </section>
 
-
 <!-- FOOTER -->
 
     <footer>
@@ -73,7 +71,5 @@
     </footer>
 
 </div>
-
-    <script src="./js/master.js"></script>
 </body>
 </html>

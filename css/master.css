@@ -33,9 +33,14 @@ input {
     position: relative;
 }
 
+.navbar {
+    position: relative;
+    height: 80px;
+}
+
 .app {
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 80px);
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -55,11 +60,26 @@ input {
     margin: 0 auto;
 }
 
+.container-fluid {
+    height: 100%;
+}
+
 
 /* FLEX AND PARTS OF THE APP  */
 
 .row {
     display: flex;
+    height: 100%;
+}
+
+.col-2 {
+    flex-basis: calc((100%/12)* 2);
+}
+
+.col-8 {
+    flex-basis: calc((100%/12)* 8);
+    display: flex;
+    justify-content: center;
 }
 
 .row-app {
@@ -114,7 +134,9 @@ label {
     cursor: pointer;
     width: 200px;
     align-self: center;
-    font-weight: bold;
+    color: rgb(31, 114, 219);
+    font-weight: bolder;
+    font-size: 1rem;
 }
 
 .generated-pass-wrapper {
