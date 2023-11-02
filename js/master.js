@@ -1,5 +1,4 @@
 // MY FUNCTIONS : 
-
 function syncCharacterAmount (e) {
     const value = e.target.value;
     charAmountRange.value = value ;
@@ -15,6 +14,11 @@ function generatePassword(charAmount) {
 
     return paswordGenerating;
 }
+
+function copyPassword() {
+    const copyPassword = passwordDisplay.innerText;
+    navigator.clipboard.writeText(copyPassword);
+  }
 
 // DOMS ELEMENTS 
 
@@ -37,7 +41,6 @@ let paswordGenerating = '';
 charAmountRange.addEventListener('input', syncCharacterAmount);
 charAmountNumber.addEventListener('input', syncCharacterAmount);
 
-
 form.addEventListener('submit', e => {
     e.preventDefault()
     const charAmount = parseInt(charAmountNumber.value);
@@ -45,6 +48,8 @@ form.addEventListener('submit', e => {
     const password = generatePassword(charAmount);
     passwordDisplay.innerText = password;
 })
+
+
 
 
 
