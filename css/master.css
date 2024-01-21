@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
 html {
     font-family: 'Roboto', sans-serif;
 }
@@ -21,6 +26,7 @@ body {
 
 nav {
     background-color: black;
+    padding: 0 100px;
 }
 
 table {
@@ -34,11 +40,17 @@ table {
 
 th {
     padding: 15px;
+    font-size: 20px;
+    color: black;
 }
 
 td {
     padding: 20px;
     text-align: center;
+}
+
+td img {
+    cursor: pointer;
 }
 
 input {
@@ -217,6 +229,10 @@ h2 {
     font-size: 50   px;
 }
 
+h3 {
+    font-size: 16px;
+}
+
 .add-password {
     color: black;
     border-bottom: 1px solid rgb(31, 114, 219);
@@ -240,6 +256,20 @@ label {
     border-radius: 2rem;
     cursor: pointer;
     width: 200px;
+    align-self: center;
+    color: rgb(31, 114, 219);
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.btnsm {
+    border: 0;
+    box-shadow: none;
+    height: 30px;
+    background-color: rgb(252, 179, 255);
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 60px;
     align-self: center;
     color: rgb(31, 114, 219);
     font-weight: bolder;

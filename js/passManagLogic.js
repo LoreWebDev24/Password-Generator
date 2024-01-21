@@ -35,11 +35,11 @@ const showPasswords = () => {
             const element = array[index];
 
             content += `<tr>
-    <td>${element.website} <img onclick="copyText('${element.website}')" src="img/copy.svg" alt="Copy Button" width="10" width="10" height="10">
+    <td>${element.website} <img onclick="copyText('${element.website}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
     </td>
-    <td>${element.username} <img onclick="copyText('${element.username}')" src="img/copy.svg" alt="Copy Button" width="10" width="10" height="10">
+    <td>${element.username} <img onclick="copyText('${element.username}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
     </td>
-    <td>${maskPassword(element.password)} <img onclick="copyText('${element.password}')" src="img/copy.svg" alt="Copy Button" width="10" width="10" height="10">
+    <td>${maskPassword(element.password)} <img onclick="copyText('${element.password}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
     </td>
     <td><button class="btnsm" onclick="deletePassword('${element.website}')">Delete</button></td>
         </tr>`
