@@ -8,6 +8,14 @@ function maskPassword(password){
     return passText
 }
 
+// COPY TEXT FUNCTION :
+
+function copyText(txt) {
+    navigator.clipboard.writeText(txt);
+  }
+
+// LOGIC TO FILL THE TABLE WITH DATA: 
+
 const showPasswords = () => {
     let table = document.querySelector("table")
     let data = localStorage.getItem("passwords")
@@ -70,14 +78,14 @@ document.querySelector(".btn").addEventListener("click", (e) => {
 // DELETE PASSWORD
 
 const deletePassword = (website)=>{
-
     let data = localStorage.getItem("passwords")
-    let array = JSON.parse(data);
-    arrayUpdated = array.filter((e)=>{
+    let arr = JSON.parse(data);
+    arrUpdated = arr.filter((e)=>{
         return e.website != website
     })
-    localStorage.setItem("passwords", JSON.stringify(arrayUpdated))
-
+    localStorage.setItem("passwords", JSON.stringify(arrUpdated))
     showPasswords()
-
 }
+
+// console.log(localStorage)
+

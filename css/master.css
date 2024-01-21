@@ -116,11 +116,14 @@ input:focus {
 }
 
 .password-mng-container {
-    border: 1px solid black;
     overflow: auto;
     border-radius: 1rem;
     padding: 20px;
-    background-color: white
+    background-color: #E3E6E6
+}
+
+.bg-app {
+    background-color: #202124;
 }
 
 .container-fluid {
@@ -210,12 +213,14 @@ h1 {
 
 h2 {
     padding-bottom: 20px;
-    color: rgb(31, 114, 219);
+    color: black;
+    font-size: 50   px;
 }
 
 .add-password {
-    color: rgb(31, 114, 219);
+    color: black;
     border-bottom: 1px solid rgb(31, 114, 219);
+    font-size: 20px;
     padding: 20px 0px;
 }
 
