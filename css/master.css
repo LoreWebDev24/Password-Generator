@@ -19,7 +19,7 @@ html {
 
 body {
     overflow: auto;
-    min-width: 825px;
+    min-width: 1285px;
     overflow-y: hidden;
     color: rgb(252, 179, 255);
 }
@@ -32,6 +32,13 @@ nav {
 table {
     table-layout: fixed;
     width: 100%;
+    border-bottom: 1px solid #1F72DB;
+}
+
+.table, span {
+    padding: 60px 0px;
+    font-size: 30px;
+    text-align: center;
 }
 
 .bb-black {
@@ -63,11 +70,6 @@ input {
 
 .input-wrapper {
     border-bottom: 1px solid  #1F72DB ;
-}
-
-.add-password input:focus {
-    background-color: #FCB3FF;
-    border-radius: 6px;
 }
 
 input:focus {
@@ -131,7 +133,13 @@ input:focus {
     overflow: auto;
     border-radius: 1rem;
     padding: 20px;
-    background-color: #E3E6E6
+    background-color: #E3E6E6;
+    overflow: auto;
+    max-height: 800px;
+}
+
+.sort-wrapper {
+    padding: 20px 0px;
 }
 
 .bg-app {
@@ -146,6 +154,14 @@ input:focus {
 
 .margin-top {
     margin-top: 4px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
 }
 
 /* FLEX AND PARTS OF THE APP  */

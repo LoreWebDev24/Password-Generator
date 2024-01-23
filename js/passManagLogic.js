@@ -1,9 +1,9 @@
 // MASKING PASS FUNCTION
 
-function maskPassword(password){
+function maskPassword(password) {
     let passText = ""
     for (let index = 0; index < password.length; index++) {
-        passText  += "*"
+        passText += "*"
     }
     return passText
 }
@@ -12,7 +12,7 @@ function maskPassword(password){
 
 function copyText(txt) {
     navigator.clipboard.writeText(txt);
-  }
+}
 
 // LOGIC TO FILL THE TABLE WITH DATA: 
 
@@ -20,10 +20,10 @@ const showPasswords = () => {
     let table = document.querySelector("table")
     let data = localStorage.getItem("passwords")
     if (data == null || JSON.parse(data).length == 0) {
-        table.innerHTML = "Any Password to Display"
+        table.innerHTML = "<span>Any Password to Display</span>"
     }
     else {
-        table.innerHTML =  `<thead>
+        table.innerHTML = `<thead>
         <th>Website/App</th>
         <th>Username</th>
         <th>Password</th>
@@ -34,7 +34,7 @@ const showPasswords = () => {
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
 
-            content += `<tr>
+            content += `<tbody><tr>
     <td>${element.website} <img onclick="copyText('${element.website}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
     </td>
     <td>${element.username} <img onclick="copyText('${element.username}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
@@ -42,7 +42,7 @@ const showPasswords = () => {
     <td>${maskPassword(element.password)} <img onclick="copyText('${element.password}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
     </td>
     <td><button class="btnsm" onclick="deletePassword('${element.website}')">Delete</button></td>
-        </tr>`
+        </tr></tbody>`
         }
         table.innerHTML = table.innerHTML + content
 
@@ -53,6 +53,8 @@ const showPasswords = () => {
 }
 
 showPasswords()
+
+
 document.querySelector(".btn").addEventListener("click", (e) => {
 
     e.preventDefault()
@@ -62,7 +64,7 @@ document.querySelector(".btn").addEventListener("click", (e) => {
 
     if (passwords == null) {
         let json = []
-        json.push({website: website.value, username: username.value, password: password.value })
+        json.push({ website: website.value, username: username.value, password: password.value })
 
         localStorage.setItem("passwords", JSON.stringify(json))
     }
@@ -77,15 +79,15 @@ document.querySelector(".btn").addEventListener("click", (e) => {
 
 // DELETE PASSWORD
 
-const deletePassword = (website)=>{
+const deletePassword = (website) => {
     let data = localStorage.getItem("passwords")
     let arr = JSON.parse(data);
-    arrUpdated = arr.filter((e)=>{
+    arrUpdated = arr.filter((e) => {
         return e.website != website
     })
     localStorage.setItem("passwords", JSON.stringify(arrUpdated))
     showPasswords()
 }
 
-// console.log(localStorage)
+console.log(localStorage)
 
