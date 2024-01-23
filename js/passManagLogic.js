@@ -34,7 +34,7 @@ const showPasswords = () => {
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
 
-            content += `<tbody><tr>
+            content += `<tr>
     <td>${element.website} <img onclick="copyText('${element.website}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
     </td>
     <td>${element.username} <img onclick="copyText('${element.username}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
@@ -42,7 +42,7 @@ const showPasswords = () => {
     <td>${maskPassword(element.password)} <img onclick="copyText('${element.password}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
     </td>
     <td><button class="btnsm" onclick="deletePassword('${element.website}')">Delete</button></td>
-        </tr></tbody>`
+        </tr>`
         }
         table.innerHTML = table.innerHTML + content
 
@@ -64,13 +64,13 @@ document.querySelector(".btn").addEventListener("click", (e) => {
 
     if (passwords == null) {
         let json = []
-        json.push({ website: website.value, username: username.value, password: password.value })
+        json.push({ website: website.value, username: username.value, password: password.value, id: '' })
 
         localStorage.setItem("passwords", JSON.stringify(json))
     }
     else {
         let json = JSON.parse(localStorage.getItem("passwords"))
-        json.push({ website: website.value, username: username.value, password: password.value })
+        json.push({ website: website.value, username: username.value, password: password.value, id: new Date().getMilliseconds() })
 
         localStorage.setItem("passwords", JSON.stringify(json))
     }
@@ -79,15 +79,17 @@ document.querySelector(".btn").addEventListener("click", (e) => {
 
 // DELETE PASSWORD
 
-const deletePassword = (website) => {
+const deletePassword = (id) => {
     let data = localStorage.getItem("passwords")
     let arr = JSON.parse(data);
     arrUpdated = arr.filter((e) => {
-        return e.website != website
+        return e.id != id
     })
     localStorage.setItem("passwords", JSON.stringify(arrUpdated))
     showPasswords()
 }
 
 console.log(localStorage)
+
+console.log(new Date().getMilliseconds());
 
