@@ -36,7 +36,6 @@ table {
 }
 
 .table, span {
-    padding: 60px 0px;
     font-size: 30px;
     text-align: center;
 }
@@ -46,14 +45,18 @@ table {
 }
 
 th {
-    padding: 15px;
-    font-size: 20px;
+    font-size: 16px;
     color: black;
 }
 
 td {
-    padding: 20px;
+    padding: 12px;
     text-align: center;
+    color: #1F72DB;
+}
+
+.pass-td{
+    font-size: 12px;
 }
 
 td img {

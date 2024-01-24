@@ -39,9 +39,9 @@ const showPasswords = () => {
     </td>
     <td>${element.username} <img onclick="copyText('${element.username}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
     </td>
-    <td>${maskPassword(element.password)} <img onclick="copyText('${element.password}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
+    <td class="pass-td">${maskPassword(element.password)} <img onclick="copyText('${element.password}')" src="img/copy.svg" alt="Copy Button" width="15" height="15">
     </td>
-    <td><button class="btnsm" onclick="deletePassword('${element.website}')">Delete</button></td>
+    <td><button class="btnsm" onclick="deletePassword('${element.id}')">Delete</button></td>
         </tr>`
         }
         table.innerHTML = table.innerHTML + content
@@ -70,7 +70,7 @@ document.querySelector(".btn").addEventListener("click", (e) => {
     }
     else {
         let json = JSON.parse(localStorage.getItem("passwords"))
-        json.push({ website: website.value, username: username.value, password: password.value, id: new Date().getMilliseconds() })
+        json.push({ website: website.value, username: username.value, password: password.value, id: Date.now() })
 
         localStorage.setItem("passwords", JSON.stringify(json))
     }
@@ -91,5 +91,5 @@ const deletePassword = (id) => {
 
 console.log(localStorage)
 
-console.log(new Date().getMilliseconds());
+console.log(Date.now());
 
