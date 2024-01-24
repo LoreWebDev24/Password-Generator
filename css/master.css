@@ -32,7 +32,8 @@ nav {
 table {
     table-layout: fixed;
     width: 100%;
-    border-bottom: 1px solid #1F72DB;
+    border-spacing: 0;
+    /* border-bottom: 1px solid #1F72DB; */
 }
 
 .table, span {
@@ -50,9 +51,11 @@ th {
 }
 
 td {
-    padding: 12px;
+    font-size: 16px;
+    padding: 10px 0px;
     text-align: center;
     color: #1F72DB;
+    border-bottom: 1px solid #1F72DB;
 }
 
 .pass-td{

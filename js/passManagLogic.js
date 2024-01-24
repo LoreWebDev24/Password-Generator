@@ -59,22 +59,31 @@ document.querySelector(".btn").addEventListener("click", (e) => {
 
     e.preventDefault()
 
+    let valueWebsite = document.forms["addPass"]["website"].value.trim();
+    let valueUsername = document.forms["addPass"]["username"].value.trim();
+    let valuePass = document.forms["addPass"]["password"].value.trim();
 
-    let passwords = localStorage.getItem("passwords")
-
-    if (passwords == null) {
-        let json = []
-        json.push({ website: website.value, username: username.value, password: password.value, id: '' })
-
-        localStorage.setItem("passwords", JSON.stringify(json))
-    }
+    if (valueWebsite.length < 3 || valueUsername.length < 3 || valuePass.length < 3 ) {
+        alert('Make Sure to add valid params')
+      }
     else {
-        let json = JSON.parse(localStorage.getItem("passwords"))
-        json.push({ website: website.value, username: username.value, password: password.value, id: Date.now() })
+        let passwords = localStorage.getItem("passwords")
 
-        localStorage.setItem("passwords", JSON.stringify(json))
+        if (passwords == null) {
+            let json = []
+            json.push({ website: website.value, username: username.value, password: password.value, id: '' })
+    
+            localStorage.setItem("passwords", JSON.stringify(json))
+        }
+        else {
+            let json = JSON.parse(localStorage.getItem("passwords"))
+            json.push({ website: website.value, username: username.value, password: password.value, id: Date.now() })
+    
+            localStorage.setItem("passwords", JSON.stringify(json))
+        }
+        showPasswords()
     }
-    showPasswords()
+
 })
 
 // DELETE PASSWORD
